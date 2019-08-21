@@ -12,7 +12,7 @@ if [ -z $PREFIX/bin/termux-elf-cleaner ]; then
 	cd $HOME
 fi
 for i in $PREFIX/lib/*.so*; do
-	if [ -z "$(readelf -d "$i" |grep NODELETE)" ]; then
+	if [ -z "$(readelf -d "$i" | grep NODELETE)" ]; then
 		termux-elf-cleaner "$i"
 	fi
 done 

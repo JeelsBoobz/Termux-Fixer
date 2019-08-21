@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 cd $HOME
 if [ -z $PREFIX/bin/termux-elf-cleaner ]
 then

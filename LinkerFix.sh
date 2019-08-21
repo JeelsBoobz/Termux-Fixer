@@ -16,3 +16,8 @@ for i in $PREFIX/lib/*.so*; do
 		termux-elf-cleaner "$i"
 	fi
 done 
+for i in $PREFIX/bin/*; do
+	if [ -z "$(readelf -d "$i" | grep NODELETE)" ]; then
+		termux-elf-cleaner "$i"
+	fi
+done 

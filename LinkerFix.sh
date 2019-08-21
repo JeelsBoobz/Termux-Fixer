@@ -11,4 +11,4 @@ if [ -z $PREFIX/bin/termux-elf-cleaner ]; then
 	rm -Rf $HOME/termux-elf-cleaner
 	cd $HOME
 fi
-for i in $PREFIX/lib/*.so* do [ -z "$(readelf -d "$i" |grep NODELETE)" ] || termux-elf-cleaner "$i"; done 
+for i in $PREFIX/lib/*.so* do [[ -z "$(readelf -d "$i" |grep NODELETE)" ]] || termux-elf-cleaner "$i"; done 

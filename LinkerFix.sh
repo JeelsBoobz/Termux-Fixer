@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 apt install git make clang
 cd $HOME
 git clone https://github.com/Harshiv-Patel/termux-elf-cleaner.git

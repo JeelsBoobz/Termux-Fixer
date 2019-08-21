@@ -1,7 +1,6 @@
 #!/bin/bash
 cd $HOME
-if [ -z $PREFIX/bin/termux-elf-cleaner ]
-then
+if [ -z $PREFIX/bin/termux-elf-cleaner ]; then
 	apt install git make clang
 	git clone https://github.com/Harshiv-Patel/termux-elf-cleaner.git
 	cd termux-elf-cleaner
